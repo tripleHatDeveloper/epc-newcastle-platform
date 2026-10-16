@@ -33,7 +33,13 @@ Developed by Northumbria University.
   panel.
 -->
 
-*Demo video coming soon.*
+
+
+https://github.com/user-attachments/assets/db58084d-f1ae-4120-851c-13780c13b662
+
+
+
+
 
 ## Architecture
 
