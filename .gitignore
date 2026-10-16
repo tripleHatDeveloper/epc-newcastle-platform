@@ -1,0 +1,32 @@
+# Secrets — never commit these
+api/.env
+web/.env
+.env
+.vs/
+.env.*
+!.env.example
+!*/.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ETL cache (regenerable from Overpass, not something to commit)
+api/.cache/
+
+# Package manager lockfile noise (optional — remove if you want lockfiles committed)
+package-lock.json

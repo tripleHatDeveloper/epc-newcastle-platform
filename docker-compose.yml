@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: epc_newcastle
+      POSTGRES_USER: epc_admin
+      POSTGRES_PASSWORD: change_me_locally
+    ports:
+      - "5433:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./api/src/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  api:
+    build: ./api
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./api/.env
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+
+  web:
+    build: ./web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+
+volumes:
+  db_data:

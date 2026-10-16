@@ -1,0 +1,33 @@
+{
+  "name": "epc-newcastle-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "cesium": "^1.119.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vite-plugin-cesium": "^1.2.23",
+    "vitest": "^1.6.0"
+  }
+}
