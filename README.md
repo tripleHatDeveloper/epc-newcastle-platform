@@ -1,7 +1,7 @@
 # Newcastle EPC Building Explorer
 
 A city-scale platform for exploring Energy Performance Certificate (EPC) data
-for Newcastle upon Tyne, built in partnership with Newcastle City Council.
+for Newcastle upon Tyne.
 The platform ingests live data from the UK government's Energy Certificate
 Data API, matches each record to real building geometry, and presents it
 through an interactive 3D map — a public viewer for residents and
